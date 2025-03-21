@@ -144,13 +144,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            .
+            Deriving informative visual representations from dynamic scenes is essential in sequential scene-based tasks encompassing robotics and visual tracking. 
+            Successfully executing these tasks necessitates capturing temporal evolution across consecutive scenes while retaining crucial information from observed scenes.
           </p>
           <p>
-            .
+            In this paper, we highlight the significance of effective scene summarization in achieving these goals. 
+            We introduce Squeeze-and-Expansion Masked Autoencoder (SE-MAE), a simple yet intuitive self-supervised learning pipeline that squeezes the reference scene and predicts the subsequent target scene with extremely scarce target patches as hints. 
+            Our squeeze-and-expansion mechanism facilitates the effective acquisition of sequential scene representations through the squeeze step while enhancing the temporal evolution recognition capability across consecutive scenes through the expansion step, 
+            thereby fulfilling the essential requisites for sequential scene understanding.
           </p>
           <p>
-            .
+            Extensive experiments in diverse simulated environments demonstrate the superiority of our method on robot manipulation and locomotion tasks over previous baselines. 
+            Moreover, deploying our pre-trained model on physical robots confirms its robustness and effectiveness in real-world settings. 
+            Our method even outperforms baselines on various video label propagation tasks. We provide further investigations that validate the scalability of SE-MAE.
           </p>
         </div>
       </div>
