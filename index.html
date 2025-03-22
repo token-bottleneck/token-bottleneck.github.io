@@ -111,12 +111,12 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <div class="hero-body has-text-centered">
       <!-- Flex container for the two images -->
       <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <img id="teaser" src="./static/teaser/envs_all.png" alt="Teaser Image" style="height: 300px; width: auto;">
-        <img id="teaser" src="./static/teaser/comp_radar_chart.png" alt="Teaser Image" style="height: 300px; width: auto;">
+        <img id="teaser" src="./static/teaser/envs_all.png" alt="Teaser Image" style="height: 400px; width: auto;">
+        <img id="teaser" src="./static/teaser/comp_radar_chart.png" alt="Teaser Image" style="height: 400px; width: auto;">
       </div>
 <!--/      <h2 class="subtitle has-text-centered">     --> 
 <!--/        Overall performance comparison                 --> 
@@ -127,7 +127,7 @@
 
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -158,16 +158,28 @@
 
 
   
-<section class="hero teaser">
+
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="."
-                type=".">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">.</span> ...
-      </h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Performance</h2>
+        <div class="content has-text-justified">
+          <p>
+            Here's a brief performance summary illustrated below.
+          </p>
+          
+          <!-- Image inserted here -->
+          <figure>
+            <img src="./static/performance_chart.png" alt="Performance Chart" style="width: 100%; height: auto;">
+            <figcaption class="has-text-centered">Figure: Performance comparison chart</figcaption>
+          </figure>
+
+          <p>
+            The results demonstrate that our model outperforms baselines on all metrics.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
