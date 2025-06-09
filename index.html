@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="description"
         content="description">
-  <meta name="keywords" content="SE, Squeeze-and-Expansion, MAE, SE-MAE">
+  <meta name="keywords" content="ToBo, Token Bottleneck">
   <meta name="viewport" content="width=device-width, initial-scale=1.2">
-  <title>Squeeze-and-Expansion Drives Strong Dynamic Scene Learners</title>
+  <title>Token Bottleneck: One Token to Remember Dynamics</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -47,8 +47,7 @@
     <div class="container is-max-widescreen">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Squeeze-and-Expansion Drives 
-            Strong Dynamic Scene Learners</h1>
+          <h1 class="title is-1 publication-title">Token Bottleneck: One Token to Remember Dynamics</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://scholar.google.co.kr/citations?user=u-9bdkwAAAAJ&hl=en">Taekyung Kim</a><sup>1</sup>,</span>
@@ -146,19 +145,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Deriving informative visual representations from dynamic scenes is essential in sequential scene-based tasks encompassing robotics and visual tracking. 
-            Successfully executing these tasks necessitates capturing temporal evolution across consecutive scenes while retaining crucial information from observed scenes.
+            Deriving compact and temporally aware visual representations from dynamic scenes is essential for successful execution of sequential scene understanding tasks such as visual tracking and robotic manipulation. 
+          <p>
+            In this paper, we introduce <strong>Token Bottleneck (ToBo)</strong>, a simple yet intuitive self-supervised learning pipeline that squeezes a scene into a bottleneck token and predicts the subsequent scene using minimal patches as hints. 
+            The ToBo pipeline facilitates the learning of sequential scene representations by conservatively encoding the reference scene into a compact bottleneck token during the squeeze step. 
           </p>
           <p>
-            In this paper, we highlight the significance of effective scene summarization in achieving these goals. 
-            We introduce <strong>Squeeze-and-Expansion </strong>, a simple yet intuitive self-supervised learning pipeline that squeezes the reference scene and predicts the subsequent target scene with extremely scarce target patches as hints. 
-            Our squeeze-and-expansion mechanism facilitates the effective acquisition of sequential scene representations through the squeeze step while enhancing the temporal evolution recognition capability across consecutive scenes through the expansion step, 
-            thereby fulfilling the essential requisites for sequential scene understanding.
-          </p>
-          <p>
-            Extensive experiments in diverse simulated environments demonstrate the superiority of our method on robot manipulation and locomotion tasks over previous baselines. 
-            Moreover, deploying our pre-trained model on physical robots confirms its robustness and effectiveness in real-world settings. 
-            Our method even outperforms baselines on various video label propagation tasks. We provide further investigations that validate the scalability of our method.
+            In the expansion step, we guide the model to capture temporal dynamics by predicting the target scene using the bottleneck token along with few target patches as hints. 
+            This design encourages the vision backbone to embed temporal dependencies, thereby enabling understanding of dynamic transitions across scenes. 
+            Extensive experiments in diverse sequential tasks, including video label propagation and robot manipulation in simulated environments demonstrate the superiority of ToBo over baselines. 
+            Moreover, deploying our pre-trained model on physical robots confirms its robustness and effectiveness in real-world environments. 
+            We further validate the scalability of ToBo across different model scales.
           </p>
         </div>
       </div>
@@ -218,7 +215,7 @@
           <video width="300" autoplay muted loop playsinline>
             <source src="static/videos/door_opening/ours_semae_door_opening.mp4" type="video/mp4">
           </video>
-          <figcaption>Ours</figcaption>
+          <figcaption>ToBo (ours)</figcaption>
         </figure>
   
       </div>
@@ -249,7 +246,7 @@
           <video width="300" autoplay muted loop playsinline>
             <source src="static/videos/drawer_closing/ours_semae_drawer_closing.mp4" type="video/mp4">
           </video>
-          <figcaption>Ours</figcaption>
+          <figcaption>ToBo (ours)</figcaption>
         </figure>
   
       </div>
@@ -281,7 +278,7 @@
           <video width="300" autoplay muted loop playsinline>
             <source src="static/videos/cup_stacking/ours_semae_cup_stacking.mp4" type="video/mp4">
           </video>
-          <figcaption>Ours</figcaption>
+          <figcaption>ToBo (ours)</figcaption>
         </figure>
   
       </div>
@@ -336,9 +333,9 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-widescreen content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{kim2025semae,
+    <pre><code>@article{kim2025tokenbottleneck,
   author    = {Taekyung Kim and Dongyoon Han and Byeongho Heo and Jeongeun Park and Sangdoo Yun},
-  title     = {Squeeze-and-Expansion Drives are Strong Dynamic Scene Learners},
+  title     = {Token Bottleneck: One Token to Remember Dynamics},
   journal   = {arxiv (available in May)},
   year      = {2025},
 }</code></pre>
