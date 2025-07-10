@@ -147,14 +147,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Deriving compact and temporally aware visual representations from dynamic scenes is essential for successful execution of sequential scene understanding tasks such as visual tracking and robotic manipulation. 
+            Deriving compact and temporally aware visual representations from dynamic scenes is essential for successful execution of sequential scene understanding tasks such as visual tracking and robotic manipulation.
           <p>
             In this paper, we introduce <strong>Token Bottleneck (ToBo)</strong>, a simple yet intuitive self-supervised learning pipeline that squeezes a scene into a bottleneck token and predicts the subsequent scene using minimal patches as hints. 
             The ToBo pipeline facilitates the learning of sequential scene representations by conservatively encoding the reference scene into a compact bottleneck token during the squeeze step. 
-          </p>
-          <p>
             In the expansion step, we guide the model to capture temporal dynamics by predicting the target scene using the bottleneck token along with few target patches as hints. 
             This design encourages the vision backbone to embed temporal dependencies, thereby enabling understanding of dynamic transitions across scenes. 
+          </p>
+          <p>
             Extensive experiments in diverse sequential tasks, including video label propagation and robot manipulation in simulated environments demonstrate the superiority of ToBo over baselines. 
             Moreover, deploying our pre-trained model on physical robots confirms its robustness and effectiveness in real-world environments. 
             We further validate the scalability of ToBo across different model scales.
@@ -167,6 +167,10 @@
   </div>
 </section>
 
+ 
+
+
+  
 
 
 <section class="hero teaser">
